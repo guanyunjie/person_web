@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>官云杰的个人网站-各种小Demo</title>
+    <link rel="stylesheet" href="../style/css/main.css" />
+    <link rel="stylesheet" href="../style/css/bootstrap.min.css" />
+</head>
+<body>
+    <div id="header" :controller="header">
+        <template :widget="{is:'ms-header'}"></template>
+    </div>
+    <div id="main" :controller="main">
+        <div class="container">
+            <h3>this is main of page!!!</h3>
+            <p :html="@test1"></p>
+        </div>
+    </div>
+    <div id="footer" :controller="footer">
+        <template :widget="{is:'ms-footer'}"></template>
+    </div>
+</body>
+</html>
+<script src="../lib/require.js" data-main="../control/init/index.init.js" ></script>

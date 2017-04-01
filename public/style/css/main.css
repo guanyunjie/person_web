@@ -1,0 +1,28 @@
+#logo{background-image: url(../img/logo.png);width: 332px;height: 80px;display: inline-block;}
+.j_nav{display: inline-block;position: relative;float: right;top: 20px;}
+.j_en{display: block;transition: .3s;transform: translateY(-100%);opacity: 0;}
+.j_en:hover{opacity: 1;transform: translateY(0);}
+
+.nav a{padding-top: 25px !important;padding-bottom: 4px !important;}
+.tempt_font_div{position: absolute;left: 20%;top: 50%;height:150px;width: 300px;margin-top: -50px;}
+.tempt_font_div p{transition: 1.5s;opacity: 0;font-size: 16px;}
+.f_show{opacity: 1 !important;transform: translateX(60px);}
+.div_qq{position: absolute;top: 50%;border: 4px solid #FFFFFF; margin-top: -70px;left: 66%;width: 140px;height:140px;border-radius: 100%;background-image: url(../img/qq_photo.jpg);overflow: hidden;}
+.div_qq:hover{cursor: pointer;}
+.qq_name{opacity: 0 ;width: 140px;height: 50px;background-color: rgba(0, 0, 0, .5);color: #FFFFFF;padding: 5px;line-height: 20px;position: absolute;top: 100%;text-align: center;}
+
+#gyj_show a{text-decoration: none;color: #fff;}
+.personal_show_div{padding: 10px 10px 10px 10px;transition: .8s;border-radius: 5px;}
+.personal_show_div img{border: 3px solid #fff;}
+.personal_show_div span{opacity: 0;display: block;transition: 1s;}
+.personal_show_div:hover{background-color: #847e7e;}
+
+#article p{font-weight: bold;width: 80px;background-color: #FFFFFF;}
+
+.demo{height: 50px;}
+
+*{font-family: "微软雅黑", Arial, Helvetica, sans-serif;}
+i,em{font-style: normal;}
+.nav span{display: block;font-size: 18px;}
+.nav a span:last-child{opacity: 0;transition: .3s;transform: translateY(-100%);font-size: 14px;color: rgba(140, 140, 140, 0.78);}
+

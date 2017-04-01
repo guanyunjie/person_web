@@ -1,0 +1,8 @@
+<div class="container">
+    <h3>this is footer of page!!!</h3>
+    <ul class="list-unstyled list-inline">
+        <li :for="el in @testArr"><a href="javascript:;"><span :html="el.name"></span>==<span :html="el.age"></span></a></li>
+    </ul>
+    <span :html="@testClick"></span><br>
+    <button :on-click="@click" type="button">click</button>
+</div>
