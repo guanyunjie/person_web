@@ -1,7 +1,5 @@
 /**
  * Created by Guanyunjie on 2017/4/1.
- *
- * 
  */
 var express = require('express');
 var path = require('path');
