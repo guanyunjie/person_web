@@ -30,12 +30,12 @@ app.post('/web/query',function (req,res) {
     };
 
     var proxy = http.request(proxyRequest,function (proxyFeedback) {
-        if(proxyFeedback.status == 200){
+        if(proxyFeedback.statusCode == 200){
             var body = '';
             proxyFeedback.on('data',function (data) {
                 body += data;
             }).on('end',function () {
-                /*var exclude = proxyconf.filter;
+                var exclude = proxyconf.filter;
                 if (exclude) {
                     if (exclude.length > 0) {
                         for (var i in exclude) {
@@ -48,13 +48,13 @@ app.post('/web/query',function (req,res) {
                             }
                         }
                     }
-                }*/
+                }
                 res.send(200, body);
             });
         }
         else{
             console.warn('app-proxyconfig error');
-            res.send(500,error);
+            res.send(500,'error');
         }
     });
     proxy.write(data + '\n');

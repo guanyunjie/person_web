@@ -12,6 +12,6 @@
 exports.proxy = {
     host: "localhost",
     port: 8080,
-    path: "http://localhost:8080/JavaServer/web/query",
+    path: "http://localhost:8080/person_client/web/query",
     filter: []
 }
