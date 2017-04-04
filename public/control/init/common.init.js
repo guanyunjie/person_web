@@ -4,7 +4,8 @@
 require.config({
     paths: {
         header : '../template/header.html',
-        footer : '../template/footer.html'
+        footer : '../template/footer.html',
+        navLeft :'../template/nav_left.html',
     }
 });
 //	调用module.js

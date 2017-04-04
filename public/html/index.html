@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>官云杰的个人网站-各种小Demo</title>
-    <link rel="stylesheet" href="../style/css/main.css" />
     <link rel="stylesheet" href="../style/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../style/css/main.css" />
 </head>
 <body>
     <div id="header" :controller="header">
         <template :widget="{is:'ms-header'}"></template>
+        <template :widget="{is:'ms-nav',directory:@directory}"></template>
     </div>
     <div id="main" :controller="main">
-        <div class="container">
-            <h3>this is main of page!!!</h3>
-            <p :html="@test1"></p>
-            <button :on-click="@query">query</button>
-        </div>
+        <btn :on-click="@query" class="btn btn-danger" style="position: absolute;left: 200px;top: 100px;">click</btn>
+        <btn :on-click="@pop" class="btn btn-danger" style="position: absolute;left: 200px;top: 150px;">popover</btn>
     </div>
     <div id="footer" :controller="footer">
-        <template :widget="{is:'ms-footer'}"></template>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="modal" :controller="modal">
+        <template :widget="{is:'ms-modal-add'}"></template>
     </div>
 </body>
 </html>

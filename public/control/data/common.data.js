@@ -25,7 +25,19 @@ define(['jquery'],function ($) {
         });
     }
 
+    /**
+     *
+     * @param data
+     * @param callback
+     */
+    function queryDirectory(data,callback) {
+        request('queryDirectory',data,function (result) {
+            callback(result);
+        })
+    }
+
     return {
-        request : request
+        request : request,
+        queryDirectory:queryDirectory
     }
 });

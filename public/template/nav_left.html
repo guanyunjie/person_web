@@ -1,0 +1,27 @@
+<div>
+    <div class="nav-left">
+        <div class="all-nav">
+            <div :for="el in @directory" class="prop" :on-click="@check($event,0)">
+                <a>
+                    <h1><span :class="el.icon"></span></h1>
+                    {{el.name}}
+                    <span :hover="@edit_on" class="glyphicon glyphicon-edit"></span>
+                    <span :hover="@delete_on" class="glyphicon glyphicon-trash"></span>
+                </a>
+            </div>
+            <div class="prop" :on-click="@add($event,5)"><a><h1><span class="glyphicon glyphicon-plus"></span></h1></a></div>
+        </div>
+    </div>
+    <div id="nav-son" class="nav-son">
+        <div class="nav-son-header">
+            <span class="glyphicon glyphicon-headphones"></span>
+            <span>侧栏</span>
+        </div>
+        <ul class="list-unstyled">
+            <li :on-click="@choose()"><span class="glyphicon glyphicon-leaf"></span>颜色选择器</li>
+            <li><span class="glyphicon glyphicon-leaf"></span>SVG雨点图</li>
+            <li><span class="glyphicon glyphicon-leaf"></span>CANVAS时钟</li>
+        </ul>
+    </div>
+</div>
+
