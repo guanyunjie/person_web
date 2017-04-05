@@ -22,3 +22,17 @@
 .nav-son-header{height: 60px;background: #3185c0;line-height: 60px;text-align: center;font-size: 16px;color: #f8f8f8;}
 
 /*  */
+.header-directory{position: relative;top: 50px;line-height: 50px;font-size: 15px;color: #C8C8C8;border: 1px solid #ccc;height: 50px;box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+.header-directory a{color: #69696d;text-align: center;text-decoration: none;}
+.header-directory a:hover{color: #1769ff;}
+.sort{cursor: pointer;display: inline-block;padding-right: 25px;max-width: 33%;position: relative;text-align: left;padding-left: 25px;}
+
+/* 新增分类模态框 */
+.icon_attr{width: 80%;margin: auto;padding-bottom: 10px;}
+.icon_attr label{margin-right: 10px;}
+.icon_attr span{font-size: 16px;position: relative;top: 3px;left: 2px;}
+.icon_list{width: 80%;margin: auto;padding: 10px 15px 10px 50px;}
+.icon_list a{color: #69696d;}
+.icon_list div{position: relative;width: 40px;height: 40px;border: 1px solid #ccc;display: inline-block;border-radius: 3px;margin: 5px 10px;}
+.icon_list span{font-size: 22px;position: relative;top: 7px;left: 8px;}
+

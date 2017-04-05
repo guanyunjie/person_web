@@ -1,55 +1,25 @@
 /**
  * Created by Guanyunjie on 2017/4/2 0002.
  */
-define(['avalon','jquery','text!header','text!footer','text!navLeft','../data/common.data'],function (avalon,$,header,footer,nav,$data) {
+define(['avalon','jquery','../data/common.data'],function (avalon,$,$data) {
     avalon.ready(function () {
         var vm_header = avalon.define({
-            $id : 'header',
-            directory:[]
-        });
-        /**
-         * 定义组件
-         */
-        avalon.component('ms-header',{
-            template:header,
-            defaults:{
+            $id : 'headerControl',
+            directory:[],
+            checkDirectory:function (id) {
 
-            }
-        });
-        avalon.component('ms-nav',{
-            template:nav,
-            defaults:{
-                on:'nav_on',
-                edit_on:"edit_on",
-                delete_on:'delete_on',
-                onInit:function(){
-                    $data.queryDirectory({},function (result) {
-                        console.log(result);
-                        vm_header.directory = result.result;
-                    });
-                },
-                check : function (e,index) {
-                    var $childs = $(".all-nav").children();
-                    if($childs.eq(index).hasClass('nav_on')){
-                        $childs.eq(index).removeClass('nav_on');
-                        $("#nav-son").hide();
-                    }
-                    else{
-                        $childs.removeClass('nav_on');
-                        $childs.eq(index).addClass('nav_on');
-                        $("#nav-son").show();
-                    }
-                },
-                choose:function () {
-                    $("#nav-son").hide();
-                    $(".all-nav").children().removeClass('nav_on');
-                },
-                add:function (e) {
-                    $("#modal_add").modal('show');
-                }
+            },
+            insertDirectory:function () {
+                $("#modal_add").modal({'show':true,'backdrop':'static'});
             }
         });
         avalon.scan($("#header")[0]);
+
+        $data.queryDirectory({},function (result) {
+            if(result.status == "success"){
+                vm_header.directory = result.result;
+            }
+        });
 
         var vm_footer = avalon.define({
             $id : 'footer'
@@ -65,7 +35,26 @@ define(['avalon','jquery','text!header','text!footer','text!navLeft','../data/co
             }
         });
         avalon.scan($("#footer")[0]);
+
+        /**
+         * 控制模态框的vm
+         */
+        var vm_modal = avalon.define({
+            $id : 'modalControl',
+            icons:[],
+            unfoldIcon : function () {
+                $data.queryIcons({},function (result) {
+                    if(result.status == 'success'){
+                        vm_modal.icons = result.result;
+                    }
+                });
+            },
+
+        });
+
+        avalon.scan($("#modal")[0]);
     });
+    
 
 
     /**
@@ -104,9 +93,8 @@ define(['avalon','jquery','text!header','text!footer','text!navLeft','../data/co
         }
         return new Date().Format("yyyy-MM-dd hh:mm:ss");
     }
-
     return {
         getCurrentTime:getCurrentTime,
-        uuid:uuid
+        uuid:uuid,
     }
 });

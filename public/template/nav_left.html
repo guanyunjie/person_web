@@ -1,10 +1,10 @@
 <div>
     <div class="nav-left">
         <div class="all-nav">
-            <div :for="el in @directory" class="prop" :on-click="@check($event,0)">
+            <div class="prop" :on-click="@check($event,0)">
                 <a>
-                    <h1><span :class="el.icon"></span></h1>
-                    {{el.name}}
+                    <h1><span class="glyphicon glyphicon-edit"></span></h1>
+                    SVG
                     <span :hover="@edit_on" class="glyphicon glyphicon-edit"></span>
                     <span :hover="@delete_on" class="glyphicon glyphicon-trash"></span>
                 </a>

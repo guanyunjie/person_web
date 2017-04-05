@@ -6,7 +6,7 @@ require.config({
 	paths: { 
 		jquery : "../lib/jquery-1.11.1.min",
 		avalon : "../lib/avalon.min",
-        boot : "../lib/bootstrap.min",
+        boot : "../style/js/bootstrap.min",
 		text : "../lib/text",
 	},
 	shim: {
@@ -20,3 +20,14 @@ require.config({
 });
 //	调用module.js
 require(['../control/viewModule/index.module','../control/init/common.init'], function(model,com) {});
+/**
+ *
+ */
+function requirefn() {}
+requirefn.prototype = {
+    /**
+	 * 通用
+     * @param event
+     */
+}
+var $page = new requirefn();
