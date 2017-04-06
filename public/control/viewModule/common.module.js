@@ -7,7 +7,14 @@ define(['avalon','jquery','../data/common.data'],function (avalon,$,$data) {
             $id : 'headerControl',
             directory:[],
             checkDirectory:function (id) {
-
+                $("#note").fadeToggle('fast',function () {
+                    if($("#main").hasClass("fuzzy")){
+                        $("#main").removeClass("fuzzy");
+                    }
+                    else{
+                        $("#main").addClass("fuzzy");
+                    }
+                });
             },
             insertDirectory:function () {
                 $("#modal_add").modal({'show':true,'backdrop':'static'});

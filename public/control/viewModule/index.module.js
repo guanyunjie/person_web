@@ -54,6 +54,8 @@ define(["avalon", "jquery","boot","../data/index.data","./common.module","text!m
 
 		avalon.scan($("#modal")[0]);
 
+		var $h = window.screen.availHeight - 260;
+		$("#modal_zz").height($h);
     });
 	return {
 

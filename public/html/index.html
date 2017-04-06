@@ -28,7 +28,7 @@
                 <a :for="el in @directory" href="javascript:;" :on-click="@checkDirectory(el.id)">
                     <span class="sort" >
                         <span :class="el.icon"></span>
-                        &nbsp;{{el.name}}
+                        &nbsp;<em :text="el.name"></em>
                         <span class="caret"></span>
                     </span>|
                 </a>
@@ -37,16 +37,206 @@
                         <span class="glyphicon glyphicon-plus"></span>
                         &nbsp;新建分类
                         <span class="caret"></span>
-                    </span>|
+                    </span>
                 </a>
+            </div>
+        </div>
+        <div id="note" class="container-fluid header-note">
+            <div class="container">
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-music"></span>
+                    <em>媒体</em>
+                </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-music"></span>&nbsp;
+                    <em>媒体</em>
+                </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-music"></span>
+                    <em>媒体</em>
+                </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-music"></span>
+                    <em>媒体</em>
+                </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-music"></span>
+                    <em>媒体</em>
+                </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-music"></span>
+                    <em>媒体</em>
+                </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-music"></span>
+                    <em>媒体</em>
+                </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-music"></span>
+                    <em>媒体</em>
+                </button>
             </div>
         </div>
     </div>
     <div id="main" :controller="main">
-        <!--<btn :on-click="@query" class="btn btn-danger" style="position: absolute;left: 200px;top: 100px;">click</btn>
-        <btn :on-click="@pop" class="btn btn-danger" style="position: absolute;left: 200px;top: 150px;">popover</btn>-->
+        <div class="container-fluid main">
+            <div class="container">
+                <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs main-note">
+                    <a href="javascript:;" target="_blank"><img src="../style/img/111.png" alt=""></a>
+                    <div class="note-info">
+                        <a href="javascript:;" target="_blank"><h4>这里是标题</h4></a>
+                        <small>这是内容区域</small>
+                    </div>
+                    <div class="note-fields">
+                        <span class="glyphicon glyphicon-th-list"></span>分类
+                    </div>
+                    <div class="note-stat">
+                        <span class="glyphicon glyphicon-eye-open"></span><em>214</em>
+                        <span class="glyphicon glyphicon-heart"></span><em>35</em>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs main-note">
+                    <a href="javascript:;" target="_blank"><img src="../style/img/111.png" alt=""></a>
+                    <div class="note-info">
+                        <a href="javascript:;" target="_blank"><h4>这里是标题</h4></a>
+                        <small>这是内容区域</small>
+                    </div>
+                    <div class="note-fields">
+                        <span class="glyphicon glyphicon-th-list"></span>分类
+                    </div>
+                    <div class="note-stat">
+                        <span class="glyphicon glyphicon-eye-open"></span><em>214</em>
+                        <span class="glyphicon glyphicon-heart"></span><em>35</em>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs main-note">
+                    <a href="javascript:;" target="_blank"><img src="../style/img/111.png" alt=""></a>
+                    <div class="note-info">
+                        <a href="javascript:;" target="_blank"><h4>这里是标题</h4></a>
+                        <small>这是内容区域</small>
+                    </div>
+                    <div class="note-fields">
+                        <span class="glyphicon glyphicon-th-list"></span>分类
+                    </div>
+                    <div class="note-stat">
+                        <span class="glyphicon glyphicon-eye-open"></span><em>214</em>
+                        <span class="glyphicon glyphicon-heart"></span><em>35</em>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs main-note">
+                    <a href="javascript:;" target="_blank"><img src="../style/img/111.png" alt=""></a>
+                    <div class="note-info">
+                        <a href="javascript:;" target="_blank"><h4>这里是标题</h4></a>
+                        <small>这是内容区域</small>
+                    </div>
+                    <div class="note-fields">
+                        <span class="glyphicon glyphicon-th-list"></span>分类
+                    </div>
+                    <div class="note-stat">
+                        <span class="glyphicon glyphicon-eye-open"></span><em>214</em>
+                        <span class="glyphicon glyphicon-heart"></span><em>35</em>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs main-note">
+                    <a href="javascript:;" target="_blank"><img src="../style/img/111.png" alt=""></a>
+                    <div class="note-info">
+                        <a href="javascript:;" target="_blank"><h4>这里是标题</h4></a>
+                        <small>这是内容区域</small>
+                    </div>
+                    <div class="note-fields">
+                        <span class="glyphicon glyphicon-th-list"></span>分类
+                    </div>
+                    <div class="note-stat">
+                        <span class="glyphicon glyphicon-eye-open"></span><em>214</em>
+                        <span class="glyphicon glyphicon-heart"></span><em>35</em>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs main-note">
+                    <a href="javascript:;" target="_blank"><img src="../style/img/111.png" alt=""></a>
+                    <div class="note-info">
+                        <a href="javascript:;" target="_blank"><h4>这里是标题</h4></a>
+                        <small>这是内容区域</small>
+                    </div>
+                    <div class="note-fields">
+                        <span class="glyphicon glyphicon-th-list"></span>分类
+                    </div>
+                    <div class="note-stat">
+                        <span class="glyphicon glyphicon-eye-open"></span><em>214</em>
+                        <span class="glyphicon glyphicon-heart"></span><em>35</em>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs main-note">
+                    <a href="javascript:;" target="_blank"><img src="../style/img/111.png" alt=""></a>
+                    <div class="note-info">
+                        <a href="javascript:;" target="_blank"><h4>这里是标题</h4></a>
+                        <small>这是内容区域</small>
+                    </div>
+                    <div class="note-fields">
+                        <span class="glyphicon glyphicon-th-list"></span>分类
+                    </div>
+                    <div class="note-stat">
+                        <span class="glyphicon glyphicon-eye-open"></span><em>214</em>
+                        <span class="glyphicon glyphicon-heart"></span><em>35</em>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs main-note">
+                    <a href="javascript:;" target="_blank"><img src="../style/img/111.png" alt=""></a>
+                    <div class="note-info">
+                        <a href="javascript:;" target="_blank"><h4>这里是标题</h4></a>
+                        <small>这是内容区域</small>
+                    </div>
+                    <div class="note-fields">
+                        <span class="glyphicon glyphicon-th-list"></span>分类
+                    </div>
+                    <div class="note-stat">
+                        <span class="glyphicon glyphicon-eye-open"></span><em>214</em>
+                        <span class="glyphicon glyphicon-heart"></span><em>35</em>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs main-note">
+                    <a href="javascript:;" target="_blank"><img src="../style/img/111.png" alt=""></a>
+                    <div class="note-info">
+                        <a href="javascript:;" target="_blank"><h4>这里是标题</h4></a>
+                        <small>这是内容区域</small>
+                    </div>
+                    <div class="note-fields">
+                        <span class="glyphicon glyphicon-th-list"></span>分类
+                    </div>
+                    <div class="note-stat">
+                        <span class="glyphicon glyphicon-eye-open"></span><em>214</em>
+                        <span class="glyphicon glyphicon-heart"></span><em>35</em>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs main-note">
+                    <a href="javascript:;" target="_blank"><img src="../style/img/111.png" alt=""></a>
+                    <div class="note-info">
+                        <a href="javascript:;" target="_blank"><h4>这里是标题</h4></a>
+                        <small>这是内容区域</small>
+                    </div>
+                    <div class="note-fields">
+                        <span class="glyphicon glyphicon-th-list"></span>分类
+                    </div>
+                    <div class="note-stat">
+                        <span class="glyphicon glyphicon-eye-open"></span><em>214</em>
+                        <span class="glyphicon glyphicon-heart"></span><em>35</em>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="footer" :controller="footer">
+        <div class="nav navbar-inverse footer">
+            <div class="container">
+
+                <ul class="list-inline">
+                    <li style="border-left: 1px "><a href="javascript:;">copyright</a></li>
+                    <li><a href="javascript:;">copyright</a></li>
+                    <li><a href="javascript:;">copyright</a></li>
+                    <li><a href="javascript:;">copyright</a></li>
+                    <li style="float: right;">Copyright © 2012-2017 jQuery插件库Version 3.0.0. 备案号:沪ICP备13043785号-1.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- 模态框 -->

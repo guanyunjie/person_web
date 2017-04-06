@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>笔记本</title>
+    <link rel="stylesheet" href="../style/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../style/css/main.css" />
+</head>
+<body>
+    <div id="header" :controller="headerControl">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="javascript:;"><span class="glyphicon glyphicon-phone"></span>demo</a></li>
+                        <li><a href="javascript:;"><span class="glyphicon glyphicon-briefcase"></span>demo</a></li>
+                        <li><a href="javascript:;"><span class="glyphicon glyphicon-leaf"></span>demo</a></li>
+                        <li><a href="javascript:;"><span class="glyphicon glyphicon-save"></span>demo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid header-directory">
+            <div class="container">
+                <a href="javascript:;">
+                    <span class="sort" >
+                        <span class="el.icon"></span>
+                        &nbsp;目录1
+                        <span class="caret"></span>
+                    </span>|
+                </a>
+                <a href="javascript:;" :on-click="@insertDirectory">
+                    <span class="sort" >
+                        <span class="glyphicon glyphicon-plus"></span>
+                        &nbsp;新建分类
+                        <span class="caret"></span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+
+    </div>
+</body>
+</html>

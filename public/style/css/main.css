@@ -1,5 +1,11 @@
 .glyphicon{margin-right: 5px;}
 
+
+em,i{font-style: normal;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+/* 背景虚化 */
+.fuzzy{webkit-filter: blur(3px);-moz-filter: blur(3px);-ms-filter: blur(3px);filter: blur(3px);}
 /* 左侧导航条 */
 .nav-left{z-index: 10000;  position: fixed;top: 51px;  left: 0;  width: 100px;  min-height: 450px;  background-color: #3e434a;  bottom: 0;}
 .all-nav{position: absolute;  left: 0;  width: 100%;  height: 100%;  overflow: visible;  border-style: none;border-right: 0;}
@@ -21,11 +27,16 @@
 .nav-son>ul>li:hover{cursor: pointer;background-color: rgba(184, 236, 255, 0.71);color: #0f0f0f;font-weight: bold;}
 .nav-son-header{height: 60px;background: #3185c0;line-height: 60px;text-align: center;font-size: 16px;color: #f8f8f8;}
 
-/*  */
-.header-directory{position: relative;top: 50px;line-height: 50px;font-size: 15px;color: #C8C8C8;border: 1px solid #ccc;height: 50px;box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+/* 一级目录分类 */
+.header-directory{line-height: 50px;font-size: 15px;color: #C8C8C8;border: 1px solid #ccc;height: 50px;box-shadow: 0 2px 6px rgba(0,0,0,0.1);position: fixed;z-index: 999;background-color: #fff;left: 0;top: 50px;right: 0;bottom: 0;}
 .header-directory a{color: #69696d;text-align: center;text-decoration: none;}
 .header-directory a:hover{color: #1769ff;}
 .sort{cursor: pointer;display: inline-block;padding-right: 25px;max-width: 33%;position: relative;text-align: left;padding-left: 25px;}
+
+/* 笔记分类 */
+.header-note{position: fixed;left: 0;right: 0;top: 100px;display: none;z-index: 1020;background-color: rgb(255, 255, 255);}
+.header-note>div{margin: 20px auto;}
+.header-note button{width: 265px;height: 40px;text-align: left;padding-left: 50px;margin: 5px 10px;font-size: 16px;}
 
 /* 新增分类模态框 */
 .icon_attr{width: 80%;margin: auto;padding-bottom: 10px;}
@@ -36,3 +47,25 @@
 .icon_list div{position: relative;width: 40px;height: 40px;border: 1px solid #ccc;display: inline-block;border-radius: 3px;margin: 5px 10px;}
 .icon_list span{font-size: 22px;position: relative;top: 7px;left: 8px;}
 
+/* main */
+.main{position: relative;top: 100px;background-color: #f4f4f4;transition: 0.3s;}
+.main .col-lg-3,.main .col-md-3{width: 22.8%;}
+.main>div{padding-top: 30px;padding-left: 0;padding-right: 0;}
+.main-note{overflow: hidden;margin-left: 10px;margin-right: 10px;border-radius: 5px;padding: 0;background-color: #fff;box-shadow: 0 1px 3px rgba(0,0,0,0.18);margin-bottom: 20px;}
+.main-note a{display: block;}
+.main-note img{width: 100%;  border-top-left-radius: 5px;border-top-right-radius: 5px;transition: all 1s ease 0s;}
+.main-note:hover img{-webkit-filter: brightness(.5);filter: brightness(.5);-moz-transform: scale(1.05);-webkit-transform: scale(1.05);}
+.note-info{padding: 6px 15px 28px;height: 80px;overflow: hidden;}
+.note-info h4{font-size: 14px;overflow: hidden;text-overflow: ellipsis;word-break: keep-all;white-space: nowrap;display: block;font-weight: bold;line-height: 18px;margin-top: 7px;margin-bottom: 5px;}
+.note-info a{color: #60BDE8;transition: 0.5s;}
+.note-info a:hover{color: #ff7200;}
+.note-info small{color: #838383;padding-bottom: 10px;font-size: 85%;}
+.note-fields{opacity: 0.6;bottom: 34px;font-size: 12px;height: 35px;left: 10px;line-height: 35px;max-width: 210px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;padding-left: 15px;padding-right: 15px;}
+.note-stat{background-color: #f6f6f6;border-radius: 0 0 3px 3px;border-top: 1px solid #e7e7e7;box-shadow: 0 1px 0 0 #fff inset;padding: 7px 15px 7px 15px;color: #8B8B8C;position: relative;}
+.note-stat span{font-size: 10px;}
+.note-stat em{padding-right: 12px;}
+
+/* 页脚 */
+.footer{height: 40px;margin: 0;padding: 0;display: block;position: relative;top: 100px;}
+.footer a{color: #939393;}
+.footer ul>li{line-height: 40px;font-size: 14px;padding-left: 10px;padding-right: 10px;border-right: 1px solid #000;box-shadow: 1px 0 0 #303030;}
